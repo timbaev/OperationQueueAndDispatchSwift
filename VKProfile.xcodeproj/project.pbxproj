@@ -11,6 +11,8 @@
 		CB42F4D51F73048900871971 /* ImageRounder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB42F4D41F73048900871971 /* ImageRounder.swift */; };
 		CB42F4D71F7304ED00871971 /* ColorRGB.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB42F4D61F7304ED00871971 /* ColorRGB.swift */; };
 		CB42F4D91F730BA000871971 /* EndingWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB42F4D81F730BA000871971 /* EndingWord.swift */; };
+		CB5723731FA24A11009747E1 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5723721FA24A11009747E1 /* Repository.swift */; };
+		CB5723751FA24E3C009747E1 /* NewsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5723741FA24E3C009747E1 /* NewsRepository.swift */; };
 		CB5A1A761F66D55500C1971E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5A1A751F66D55500C1971E /* AppDelegate.swift */; };
 		CB5A1A781F66D55500C1971E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5A1A771F66D55500C1971E /* ViewController.swift */; };
 		CB5A1A7B1F66D55500C1971E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB5A1A791F66D55500C1971E /* Main.storyboard */; };
@@ -68,6 +70,8 @@
 		CB42F4D41F73048900871971 /* ImageRounder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageRounder.swift; sourceTree = "<group>"; };
 		CB42F4D61F7304ED00871971 /* ColorRGB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorRGB.swift; sourceTree = "<group>"; };
 		CB42F4D81F730BA000871971 /* EndingWord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndingWord.swift; sourceTree = "<group>"; };
+		CB5723721FA24A11009747E1 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		CB5723741FA24E3C009747E1 /* NewsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsRepository.swift; sourceTree = "<group>"; };
 		CB5A1A721F66D55500C1971E /* VKProfile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKProfile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB5A1A751F66D55500C1971E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB5A1A771F66D55500C1971E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -133,6 +137,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CB5723711FA249D9009747E1 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				CB5723721FA24A11009747E1 /* Repository.swift */,
+				CB5723741FA24E3C009747E1 /* NewsRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
 		CB5A1A691F66D55500C1971E = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +165,7 @@
 		CB5A1A741F66D55500C1971E /* VKProfile */ = {
 			isa = PBXGroup;
 			children = (
+				CB5723711FA249D9009747E1 /* Repository */,
 				CB7134171F828C0600D0FF16 /* Protocols */,
 				CBD1044D1F75652400A48BCD /* UserInfo */,
 				CBD104401F743C0E00A48BCD /* Controllers */,
@@ -358,6 +372,7 @@
 				CB8935251F877B3300C26DD2 /* MoreProfileAlert.swift in Sources */,
 				CB7EFFA61F9E2ABE00E05FBD /* PresentCollectionViewCell.swift in Sources */,
 				CB7061DD1F76C7F4008A14A8 /* PresentTableViewCell.swift in Sources */,
+				CB5723751FA24E3C009747E1 /* NewsRepository.swift in Sources */,
 				CB42F4D91F730BA000871971 /* EndingWord.swift in Sources */,
 				CB42F4D21F73035400871971 /* InfoTableViewController.swift in Sources */,
 				CB7061E01F76CBA3008A14A8 /* PresentInfo.swift in Sources */,
@@ -383,6 +398,7 @@
 				CBD104471F752E2900A48BCD /* MainInfoTableViewCell.swift in Sources */,
 				CB42F4D71F7304ED00871971 /* ColorRGB.swift in Sources */,
 				CB9B22AD1F6EA7B10093AA92 /* User.swift in Sources */,
+				CB5723731FA24A11009747E1 /* Repository.swift in Sources */,
 				CB7173301F98A80C00B6ACAF /* PhotoCollectionViewCell.swift in Sources */,
 				CB71341B1F82914C00D0FF16 /* BorderCreater.swift in Sources */,
 				CB7DFB9C1F7012400041877A /* FollowerTableViewCell.swift in Sources */,
