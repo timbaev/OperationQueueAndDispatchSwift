@@ -72,6 +72,7 @@ class ViewController: UITableViewController, CreateNewsDelegate, UICollectionVie
         registerCell()
         setLabels()
         createNews()
+        loadNews()
     }
     
     deinit {
@@ -111,11 +112,15 @@ class ViewController: UITableViewController, CreateNewsDelegate, UICollectionVie
     private func createNews() {
         let news1 = News(text: newsText1, image: user.photos[0], likeCount: 72, commentCount: 8, respostCount: 16)
         let news2 = News(text: newsText2, image: user.photos[1], likeCount: 5, commentCount: 17, respostCount: 48)
-        let news3 = News(text: "", image: user.photos[2], likeCount: 77, commentCount: 39, respostCount: 2)
+        let news3 = News(text: newsText3, image: user.photos[2], likeCount: 77, commentCount: 39, respostCount: 2)
         
-        news.append(news1)
-        news.append(news2)
-        news.append(news3)
+        NewsRepository.instance.syncSave(with: news1)
+        NewsRepository.instance.syncSave(with: news2)
+        NewsRepository.instance.syncSave(with: news3)
+    }
+    
+    private func loadNews() {
+        news = NewsRepository.instance.syncGetAll()
     }
     
     override func viewDidLayoutSubviews() {
@@ -173,9 +178,11 @@ class ViewController: UITableViewController, CreateNewsDelegate, UICollectionVie
     }
     
     func createNews(from newsData: News) {
-        news.append(newsData)
-        DispatchQueue.main.async {
-            self.tableView.reloadData()
+        NewsRepository.instance.asyncGetAll { (news) in
+            self.news = news
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
         }
     }
     

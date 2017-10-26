@@ -9,34 +9,45 @@
 import Foundation
 
 class NewsRepository: Repository {
+    static let instance = NewsRepository()
+    
+    private init() {}
+    
     typealias T = News
-    var news = [News]()
+    private var news = [Int : News]()
+    private var currentID = 1
     
     func syncSave(with news: News) {
-        self.news.append(news)
+        self.news[currentID] = news
+        currentID += 1
     }
     
     func asyncSave(with news: News, completionBlock: @escaping (Bool) -> ()) {
         let operationQueue = OperationQueue()
         operationQueue.addOperation {
-            self.news.append(news)
+            self.news[self.currentID] = news
+            self.currentID += 1
             completionBlock(true)
         }
     }
     
     func syncGetAll() -> [News] {
-        return news
+        let sortedNews = news.sorted(by: { $0.0 < $1.0 })
+        var newsArray = [News]()
+        sortedNews.forEach { newsArray.append($0.value) }
+        return newsArray
     }
     
     func asyncGetAll(completionBlock: @escaping ([News]) -> ()) {
         let operationQueue = OperationQueue()
         operationQueue.addOperation {
-            completionBlock(self.news)
+            let newsResult = self.syncGetAll()
+            completionBlock(newsResult)
         }
     }
     
     func syncSearch(id: Int) -> News? {
-        if let resultNews = news.first(where: { $0.id == id }) {
+        if let resultNews = news[id] {
             return resultNews
         }
         return nil
@@ -45,7 +56,7 @@ class NewsRepository: Repository {
     func asyncSearch(id: Int, completionBlock: @escaping (News?) -> ()) {
         let operationQueue = OperationQueue()
         operationQueue.addOperation {
-            if let resultNews = self.news.first(where: { $0.id == id }) {
+            if let resultNews = self.news[id] {
                 completionBlock(resultNews)
             }
             completionBlock(nil)

@@ -10,7 +10,6 @@ import UIKit
 
 struct News {
     
-    let id: Int
     let text: String
     let image: UIImage?
     let likeCount: Int
