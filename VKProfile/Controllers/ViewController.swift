@@ -107,6 +107,19 @@ class ViewController: UITableViewController, CreateNewsDelegate, UICollectionVie
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 50
         tableView.estimatedSectionHeaderHeight = 50
+        
+        refreshControl = UIRefreshControl()
+        if let refreshControl = refreshControl {
+            refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+            refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
+        }
+    }
+    
+    @objc private func refresh() {
+        news = NewsRepository.instance.syncGetAll()
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
     
     private func createNews() {
