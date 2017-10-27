@@ -38,6 +38,7 @@ class ViewController: UITableViewController, CreateNewsDelegate, UICollectionVie
     let infoIdentifierSegue = "infoSegue"
     let followersIdentifierSegue = "followersSegue"
     let createNewsIdentifierSegue = "createNewsSegue"
+    let detailsNewsSegue = "detailsNewsSegue"
     
     let infoButtonsCellIdentefier = "infoButtonCell"
     let photoCellIdentefier = "photoCell"
@@ -119,6 +120,7 @@ class ViewController: UITableViewController, CreateNewsDelegate, UICollectionVie
         news = NewsRepository.instance.syncGetAll()
         DispatchQueue.main.async {
             self.tableView.reloadData()
+            self.refreshControl?.endRefreshing()
         }
     }
     
@@ -214,6 +216,9 @@ class ViewController: UITableViewController, CreateNewsDelegate, UICollectionVie
         } else if (segue.identifier == createNewsIdentifierSegue) {
             let noteVC = segue.destination as! NoteViewController
             noteVC.createNewsDelegate = self
+        } else if (segue.identifier == detailsNewsSegue) {
+            let detailsNewsVC = segue.destination as! DetailsNewsViewController
+            detailsNewsVC.newsID = sender as! Int
         }
     }
     
@@ -234,6 +239,11 @@ class ViewController: UITableViewController, CreateNewsDelegate, UICollectionVie
         cell.prepareCell(with: news, from: user, number: indexPath.row)
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let idOffset = 1
+        performSegue(withIdentifier: detailsNewsSegue, sender: indexPath.row + idOffset)
     }
     
     //MARK: - CollectionView methods

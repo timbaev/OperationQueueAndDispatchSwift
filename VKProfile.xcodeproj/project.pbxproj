@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		59450B721FA34F9800F3DC32 /* DetailsNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59450B711FA34F9800F3DC32 /* DetailsNewsViewController.swift */; };
 		CB42F4D21F73035400871971 /* InfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB42F4D11F73035400871971 /* InfoTableViewController.swift */; };
 		CB42F4D51F73048900871971 /* ImageRounder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB42F4D41F73048900871971 /* ImageRounder.swift */; };
 		CB42F4D71F7304ED00871971 /* ColorRGB.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB42F4D61F7304ED00871971 /* ColorRGB.swift */; };
@@ -66,6 +67,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		59450B711FA34F9800F3DC32 /* DetailsNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsNewsViewController.swift; sourceTree = "<group>"; };
 		CB42F4D11F73035400871971 /* InfoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoTableViewController.swift; sourceTree = "<group>"; };
 		CB42F4D41F73048900871971 /* ImageRounder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageRounder.swift; sourceTree = "<group>"; };
 		CB42F4D61F7304ED00871971 /* ColorRGB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorRGB.swift; sourceTree = "<group>"; };
@@ -264,6 +266,7 @@
 				CB7DFB961F7011C90041877A /* FollowersTableViewController.swift */,
 				CB42F4D11F73035400871971 /* InfoTableViewController.swift */,
 				CB7134151F828AD200D0FF16 /* NoteViewController.swift */,
+				59450B711FA34F9800F3DC32 /* DetailsNewsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -371,6 +374,7 @@
 				CB71732C1F98A5A800B6ACAF /* InfoButtonCollectionViewCell.swift in Sources */,
 				CB8935251F877B3300C26DD2 /* MoreProfileAlert.swift in Sources */,
 				CB7EFFA61F9E2ABE00E05FBD /* PresentCollectionViewCell.swift in Sources */,
+				59450B721FA34F9800F3DC32 /* DetailsNewsViewController.swift in Sources */,
 				CB7061DD1F76C7F4008A14A8 /* PresentTableViewCell.swift in Sources */,
 				CB5723751FA24E3C009747E1 /* NewsRepository.swift in Sources */,
 				CB42F4D91F730BA000871971 /* EndingWord.swift in Sources */,
