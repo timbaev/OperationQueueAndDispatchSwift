@@ -118,10 +118,8 @@ class ViewController: UITableViewController, CreateNewsDelegate, UICollectionVie
     
     @objc private func refresh() {
         news = NewsRepository.instance.syncGetAll()
-        DispatchQueue.main.async {
-            self.tableView.reloadData()
-            self.refreshControl?.endRefreshing()
-        }
+        self.tableView.reloadData()
+        self.refreshControl?.endRefreshing()
     }
     
     private func createNews() {
@@ -193,10 +191,11 @@ class ViewController: UITableViewController, CreateNewsDelegate, UICollectionVie
     }
     
     func createNews(from newsData: News) {
-        NewsRepository.instance.asyncGetAll { (news) in
-            self.news = news
+        NewsRepository.instance.asyncGetAll { [weak self] (news) in
+            guard let strongSelf = self else { return }
+            strongSelf.news = news
             DispatchQueue.main.async {
-                self.tableView.reloadData()
+                strongSelf.tableView.reloadData()
             }
         }
     }
@@ -242,8 +241,8 @@ class ViewController: UITableViewController, CreateNewsDelegate, UICollectionVie
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let idOffset = 1
-        performSegue(withIdentifier: detailsNewsSegue, sender: indexPath.row + idOffset)
+        let offset = 1
+        performSegue(withIdentifier: detailsNewsSegue, sender: NewsRepository.instance.currentID - offset - indexPath.row)
     }
     
     //MARK: - CollectionView methods

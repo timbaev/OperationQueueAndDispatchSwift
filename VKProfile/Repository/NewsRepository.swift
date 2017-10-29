@@ -11,11 +11,9 @@ import Foundation
 class NewsRepository: Repository {
     static let instance = NewsRepository()
     
-    private init() {}
-    
     typealias T = News
     private var news = [Int : News]()
-    private var currentID = 1
+    var currentID = 1
     
     func syncSave(with news: News) {
         self.news[currentID] = news
@@ -24,9 +22,10 @@ class NewsRepository: Repository {
     
     func asyncSave(with news: News, completionBlock: @escaping (Bool) -> ()) {
         let operationQueue = OperationQueue()
-        operationQueue.addOperation {
-            self.news[self.currentID] = news
-            self.currentID += 1
+        operationQueue.addOperation { [weak self] in
+            guard let strongSelf = self else { return }
+            strongSelf.news[strongSelf.currentID] = news
+            strongSelf.currentID += 1
             completionBlock(true)
         }
     }
@@ -40,8 +39,9 @@ class NewsRepository: Repository {
     
     func asyncGetAll(completionBlock: @escaping ([News]) -> ()) {
         let operationQueue = OperationQueue()
-        operationQueue.addOperation {
-            let newsResult = self.syncGetAll()
+        operationQueue.addOperation { [weak self] in
+            guard let strongSelf = self else { return }
+            let newsResult = strongSelf.syncGetAll()
             completionBlock(newsResult)
         }
     }
@@ -55,8 +55,9 @@ class NewsRepository: Repository {
     
     func asyncSearch(id: Int, completionBlock: @escaping (News?) -> ()) {
         let operationQueue = OperationQueue()
-        operationQueue.addOperation {
-            if let resultNews = self.news[id] {
+        operationQueue.addOperation { [weak self] in
+            guard let strongSelf = self else { return }
+            if let resultNews = strongSelf.news[id] {
                 completionBlock(resultNews)
             }
             completionBlock(nil)

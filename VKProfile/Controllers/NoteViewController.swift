@@ -43,9 +43,10 @@ class NoteViewController: UIViewController, UITextViewDelegate {
     @IBAction func onDoneClick(_ sender: Any) {
         guard let mainText = newsTextView.text else { return }
         let news = News(text: mainText, image: nil, likeCount: 0, commentCount: 0, respostCount: 0)
-        NewsRepository.instance.asyncSave(with: news) { (insertResult) in
-            if (insertResult) {
-                self.createNewsDelegate?.createNews(from: news)
+        NewsRepository.instance.asyncSave(with: news) { [weak self] (isSaved) in
+            guard let strongSelf = self else { return }
+            if (isSaved) {
+                strongSelf.createNewsDelegate?.createNews(from: news)
             }
         }
         

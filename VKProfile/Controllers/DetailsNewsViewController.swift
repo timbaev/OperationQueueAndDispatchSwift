@@ -18,14 +18,15 @@ class DetailsNewsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NewsRepository.instance.asyncSearch(id: newsID) { (resultNews) in
+        NewsRepository.instance.asyncSearch(id: newsID) { [weak self] (resultNews) in
+            guard let selfStrong = self else { return }
             if let news = resultNews {
                 DispatchQueue.main.async {
-                    self.textLabel.text = news.text
+                    selfStrong.textLabel.text = news.text
                     if let newsImage = news.image {
-                        self.photoImageView.image = newsImage
+                        selfStrong.photoImageView.image = newsImage
                     } else {
-                        self.photoImageView.isHidden = true
+                        selfStrong.photoImageView.isHidden = true
                     }
                 }
             }
