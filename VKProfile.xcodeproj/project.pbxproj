@@ -16,6 +16,12 @@
 		CB5723751FA24E3C009747E1 /* NewsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5723741FA24E3C009747E1 /* NewsRepository.swift */; };
 		CB5A0B441FA7587B009373D6 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5A0B431FA7587B009373D6 /* WelcomeViewController.swift */; };
 		CB5A0B461FA75AD7009373D6 /* WelcomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5A0B451FA75AD7009373D6 /* WelcomePageViewController.swift */; };
+		CB5A0B481FA767A8009373D6 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5A0B471FA767A8009373D6 /* RegistrationViewController.swift */; };
+		CB5A0B4C1FA76AEA009373D6 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5A0B4B1FA76AEA009373D6 /* CheckBox.swift */; };
+		CB5A0B4E1FA77069009373D6 /* TapToHideKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5A0B4D1FA77069009373D6 /* TapToHideKeyboard.swift */; };
+		CB5A0B501FA77501009373D6 /* ShakeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5A0B4F1FA77501009373D6 /* ShakeAnimation.swift */; };
+		CB5A0B521FA7782C009373D6 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5A0B511FA7782C009373D6 /* UserRepository.swift */; };
+		CB5A0B541FA779C7009373D6 /* UserVK.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5A0B531FA779C7009373D6 /* UserVK.swift */; };
 		CB5A1A761F66D55500C1971E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5A1A751F66D55500C1971E /* AppDelegate.swift */; };
 		CB5A1A781F66D55500C1971E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5A1A771F66D55500C1971E /* ViewController.swift */; };
 		CB5A1A7B1F66D55500C1971E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB5A1A791F66D55500C1971E /* Main.storyboard */; };
@@ -78,6 +84,12 @@
 		CB5723741FA24E3C009747E1 /* NewsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsRepository.swift; sourceTree = "<group>"; };
 		CB5A0B431FA7587B009373D6 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		CB5A0B451FA75AD7009373D6 /* WelcomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePageViewController.swift; sourceTree = "<group>"; };
+		CB5A0B471FA767A8009373D6 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		CB5A0B4B1FA76AEA009373D6 /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
+		CB5A0B4D1FA77069009373D6 /* TapToHideKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapToHideKeyboard.swift; sourceTree = "<group>"; };
+		CB5A0B4F1FA77501009373D6 /* ShakeAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeAnimation.swift; sourceTree = "<group>"; };
+		CB5A0B511FA7782C009373D6 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
+		CB5A0B531FA779C7009373D6 /* UserVK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserVK.swift; sourceTree = "<group>"; };
 		CB5A1A721F66D55500C1971E /* VKProfile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKProfile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB5A1A751F66D55500C1971E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB5A1A771F66D55500C1971E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -148,6 +160,7 @@
 			children = (
 				CB5723721FA24A11009747E1 /* Repository.swift */,
 				CB5723741FA24E3C009747E1 /* NewsRepository.swift */,
+				CB5A0B511FA7782C009373D6 /* UserRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -212,6 +225,8 @@
 		CBD1043C1F743B5800A48BCD /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				CB5A0B4D1FA77069009373D6 /* TapToHideKeyboard.swift */,
+				CB5A0B4B1FA76AEA009373D6 /* CheckBox.swift */,
 				CBD104371F7439A200A48BCD /* DeclinationWord.swift */,
 				CB9B22AE1F6EACEE0093AA92 /* UserInfoData.swift */,
 				CB42F4D41F73048900871971 /* ImageRounder.swift */,
@@ -219,6 +234,7 @@
 				CB42F4D81F730BA000871971 /* EndingWord.swift */,
 				CB71341A1F82914C00D0FF16 /* BorderCreater.swift */,
 				CB8935261F87A51000C26DD2 /* TextContainer.swift */,
+				CB5A0B4F1FA77501009373D6 /* ShakeAnimation.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -231,6 +247,7 @@
 				CB8489941F75AB5A00D2FEE7 /* School.swift */,
 				CBD104511F7572E400A48BCD /* CellInfo.swift */,
 				CB7134131F8283F500D0FF16 /* News.swift */,
+				CB5A0B531FA779C7009373D6 /* UserVK.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -273,6 +290,7 @@
 				59450B711FA34F9800F3DC32 /* DetailsNewsViewController.swift */,
 				CB5A0B431FA7587B009373D6 /* WelcomeViewController.swift */,
 				CB5A0B451FA75AD7009373D6 /* WelcomePageViewController.swift */,
+				CB5A0B471FA767A8009373D6 /* RegistrationViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -391,9 +409,13 @@
 				CBD104431F744D7400A48BCD /* StatusTableViewCell.swift in Sources */,
 				CB7134161F828AD200D0FF16 /* NoteViewController.swift in Sources */,
 				CBD104541F7575F000A48BCD /* MainInfo.swift in Sources */,
+				CB5A0B521FA7782C009373D6 /* UserRepository.swift in Sources */,
+				CB5A0B481FA767A8009373D6 /* RegistrationViewController.swift in Sources */,
+				CB5A0B4E1FA77069009373D6 /* TapToHideKeyboard.swift in Sources */,
 				CB8489931F75AB3800D2FEE7 /* Institute.swift in Sources */,
 				CB8935271F87A51000C26DD2 /* TextContainer.swift in Sources */,
 				CBD1044B1F75633D00A48BCD /* ContactTableViewCell.swift in Sources */,
+				CB5A0B501FA77501009373D6 /* ShakeAnimation.swift in Sources */,
 				CB8489981F75ABB800D2FEE7 /* SchoolTableViewCell.swift in Sources */,
 				CBD104521F7572E400A48BCD /* CellInfo.swift in Sources */,
 				CBD104611F75A4FA00A48BCD /* InstituteTableViewCell.swift in Sources */,
@@ -405,6 +427,7 @@
 				CBD104641F75A66D00A48BCD /* EducationInfo.swift in Sources */,
 				CB7134141F8283F500D0FF16 /* News.swift in Sources */,
 				CB7061E31F76DDC3008A14A8 /* OtherInfoTableViewCell.swift in Sources */,
+				CB5A0B4C1FA76AEA009373D6 /* CheckBox.swift in Sources */,
 				CB5A0B441FA7587B009373D6 /* WelcomeViewController.swift in Sources */,
 				CB9B22AF1F6EACEE0093AA92 /* UserInfoData.swift in Sources */,
 				CBD104471F752E2900A48BCD /* MainInfoTableViewCell.swift in Sources */,
@@ -419,6 +442,7 @@
 				CB7134111F82828F00D0FF16 /* NewsTableViewCell.swift in Sources */,
 				CBD1045A1F757D2300A48BCD /* ProfessionInfo.swift in Sources */,
 				CBD104571F757AC300A48BCD /* ProfessionTableViewCell.swift in Sources */,
+				CB5A0B541FA779C7009373D6 /* UserVK.swift in Sources */,
 				CB7134191F828C6400D0FF16 /* CreateNewsDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
