@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		59450B721FA34F9800F3DC32 /* DetailsNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59450B711FA34F9800F3DC32 /* DetailsNewsViewController.swift */; };
 		CB1F450C1FA7AC07007B9AFE /* KeyboardResizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1F450B1FA7AC07007B9AFE /* KeyboardResizer.swift */; };
+		CB1F450E1FA7D2C5007B9AFE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1F450D1FA7D2C5007B9AFE /* LoginViewController.swift */; };
 		CB42F4D21F73035400871971 /* InfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB42F4D11F73035400871971 /* InfoTableViewController.swift */; };
 		CB42F4D51F73048900871971 /* ImageRounder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB42F4D41F73048900871971 /* ImageRounder.swift */; };
 		CB42F4D71F7304ED00871971 /* ColorRGB.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB42F4D61F7304ED00871971 /* ColorRGB.swift */; };
@@ -78,6 +79,7 @@
 /* Begin PBXFileReference section */
 		59450B711FA34F9800F3DC32 /* DetailsNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsNewsViewController.swift; sourceTree = "<group>"; };
 		CB1F450B1FA7AC07007B9AFE /* KeyboardResizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardResizer.swift; sourceTree = "<group>"; };
+		CB1F450D1FA7D2C5007B9AFE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CB42F4D11F73035400871971 /* InfoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoTableViewController.swift; sourceTree = "<group>"; };
 		CB42F4D41F73048900871971 /* ImageRounder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageRounder.swift; sourceTree = "<group>"; };
 		CB42F4D61F7304ED00871971 /* ColorRGB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorRGB.swift; sourceTree = "<group>"; };
@@ -294,6 +296,7 @@
 				CB5A0B431FA7587B009373D6 /* WelcomeViewController.swift */,
 				CB5A0B451FA75AD7009373D6 /* WelcomePageViewController.swift */,
 				CB5A0B471FA767A8009373D6 /* RegistrationViewController.swift */,
+				CB1F450D1FA7D2C5007B9AFE /* LoginViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -428,6 +431,7 @@
 				CB5A1A761F66D55500C1971E /* AppDelegate.swift in Sources */,
 				CB7061E61F76DFA2008A14A8 /* OtherInfo.swift in Sources */,
 				CBD104641F75A66D00A48BCD /* EducationInfo.swift in Sources */,
+				CB1F450E1FA7D2C5007B9AFE /* LoginViewController.swift in Sources */,
 				CB7134141F8283F500D0FF16 /* News.swift in Sources */,
 				CB7061E31F76DDC3008A14A8 /* OtherInfoTableViewCell.swift in Sources */,
 				CB5A0B4C1FA76AEA009373D6 /* CheckBox.swift in Sources */,

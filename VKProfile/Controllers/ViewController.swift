@@ -63,6 +63,8 @@ class ViewController: UITableViewController, CreateNewsDelegate, UICollectionVie
     let imageWidth: CGFloat = 129
     let imageHeight: CGFloat = 97
     
+    var userVK: UserVK!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         user = generateUser()
@@ -171,6 +173,12 @@ class ViewController: UITableViewController, CreateNewsDelegate, UICollectionVie
             user.followers.append(UserInfoData.generateUser())
         }
         user.followers[0].onlineStatus = .computer
+        
+        user.name = userVK.name
+        user.surname = userVK.surname
+        user.age = userVK.age
+        user.city = userVK.city
+        
         return user
     }
     

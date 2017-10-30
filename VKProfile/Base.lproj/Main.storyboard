@@ -183,7 +183,7 @@
         <!--Navigation Controller-->
         <scene sceneID="bMZ-2t-pLz">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VJV-B5-WcK" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="mainPageNavigationVC" automaticallyAdjustsScrollViewInsets="NO" id="VJV-B5-WcK" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="KgA-dZ-CGo">
                         <rect key="frame" x="0.0" y="20" width="320" height="44"/>
@@ -506,7 +506,7 @@
                                                 <rect key="frame" x="8" y="102" width="304" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" textContentType="name"/>
+                                                <textInputTraits key="textInputTraits" textContentType="additional-name"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Мужской" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CWa-nx-xZE">
                                                 <rect key="frame" x="8" y="140" width="73" height="30"/>
@@ -659,10 +659,10 @@
             </objects>
             <point key="canvasLocation" x="183.75" y="842.95774647887322"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="VAB-YX-dQ9">
             <objects>
-                <viewController id="87D-1V-U8q" sceneMemberID="viewController">
+                <viewController id="87D-1V-U8q" customClass="LoginViewController" customModule="VKProfile" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qKL-yH-PjJ"/>
                         <viewControllerLayoutGuide type="bottom" id="Hul-pu-V6u"/>
@@ -677,13 +677,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email или пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lKq-86-gHE">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-Mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lKq-86-gHE">
                                 <rect key="frame" x="8" y="206" width="304" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" textContentType="email"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jdg-pi-CH2">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jdg-pi-CH2">
                                 <rect key="frame" x="8" y="244" width="304" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -695,6 +695,9 @@
                                 <state key="normal" title="Войти">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="onLoginClick:" destination="87D-1V-U8q" eventType="touchUpInside" id="bIj-HZ-Owa"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V8a-0R-Lmy">
                                 <rect key="frame" x="112.5" y="375" width="95" height="30"/>
@@ -722,6 +725,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="bCf-kt-Cex"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="lKq-86-gHE" id="5Ls-zO-7dB"/>
+                        <outlet property="passwordTextField" destination="Jdg-pi-CH2" id="jzY-WG-TA1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oab-Kz-1Os" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
