@@ -14,6 +14,8 @@
 		CB42F4D91F730BA000871971 /* EndingWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB42F4D81F730BA000871971 /* EndingWord.swift */; };
 		CB5723731FA24A11009747E1 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5723721FA24A11009747E1 /* Repository.swift */; };
 		CB5723751FA24E3C009747E1 /* NewsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5723741FA24E3C009747E1 /* NewsRepository.swift */; };
+		CB5A0B441FA7587B009373D6 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5A0B431FA7587B009373D6 /* WelcomeViewController.swift */; };
+		CB5A0B461FA75AD7009373D6 /* WelcomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5A0B451FA75AD7009373D6 /* WelcomePageViewController.swift */; };
 		CB5A1A761F66D55500C1971E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5A1A751F66D55500C1971E /* AppDelegate.swift */; };
 		CB5A1A781F66D55500C1971E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5A1A771F66D55500C1971E /* ViewController.swift */; };
 		CB5A1A7B1F66D55500C1971E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB5A1A791F66D55500C1971E /* Main.storyboard */; };
@@ -74,6 +76,8 @@
 		CB42F4D81F730BA000871971 /* EndingWord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndingWord.swift; sourceTree = "<group>"; };
 		CB5723721FA24A11009747E1 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		CB5723741FA24E3C009747E1 /* NewsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsRepository.swift; sourceTree = "<group>"; };
+		CB5A0B431FA7587B009373D6 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		CB5A0B451FA75AD7009373D6 /* WelcomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePageViewController.swift; sourceTree = "<group>"; };
 		CB5A1A721F66D55500C1971E /* VKProfile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKProfile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB5A1A751F66D55500C1971E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB5A1A771F66D55500C1971E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -267,6 +271,8 @@
 				CB42F4D11F73035400871971 /* InfoTableViewController.swift */,
 				CB7134151F828AD200D0FF16 /* NoteViewController.swift */,
 				59450B711FA34F9800F3DC32 /* DetailsNewsViewController.swift */,
+				CB5A0B431FA7587B009373D6 /* WelcomeViewController.swift */,
+				CB5A0B451FA75AD7009373D6 /* WelcomePageViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -377,6 +383,7 @@
 				59450B721FA34F9800F3DC32 /* DetailsNewsViewController.swift in Sources */,
 				CB7061DD1F76C7F4008A14A8 /* PresentTableViewCell.swift in Sources */,
 				CB5723751FA24E3C009747E1 /* NewsRepository.swift in Sources */,
+				CB5A0B461FA75AD7009373D6 /* WelcomePageViewController.swift in Sources */,
 				CB42F4D91F730BA000871971 /* EndingWord.swift in Sources */,
 				CB42F4D21F73035400871971 /* InfoTableViewController.swift in Sources */,
 				CB7061E01F76CBA3008A14A8 /* PresentInfo.swift in Sources */,
@@ -398,6 +405,7 @@
 				CBD104641F75A66D00A48BCD /* EducationInfo.swift in Sources */,
 				CB7134141F8283F500D0FF16 /* News.swift in Sources */,
 				CB7061E31F76DDC3008A14A8 /* OtherInfoTableViewCell.swift in Sources */,
+				CB5A0B441FA7587B009373D6 /* WelcomeViewController.swift in Sources */,
 				CB9B22AF1F6EACEE0093AA92 /* UserInfoData.swift in Sources */,
 				CBD104471F752E2900A48BCD /* MainInfoTableViewCell.swift in Sources */,
 				CB42F4D71F7304ED00871971 /* ColorRGB.swift in Sources */,

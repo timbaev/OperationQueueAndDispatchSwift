@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="VJV-B5-WcK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="TbQ-Ns-8jN">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -116,6 +116,69 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pM3-RP-fYc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2089" y="-600"/>
+        </scene>
+        <!--Welcome View Controller-->
+        <scene sceneID="oAj-MG-lde">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="TbQ-Ns-8jN" customClass="WelcomeViewController" customModule="VKProfile" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WBG-Vh-iny" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-756" y="122"/>
+        </scene>
+        <!--Welcome Page View Controller-->
+        <scene sceneID="O0k-PD-Uk7">
+            <objects>
+                <viewController storyboardIdentifier="welcomeViewController" id="jD4-L4-iOA" customClass="WelcomePageViewController" customModule="VKProfile" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7Wv-Ad-LmT"/>
+                        <viewControllerLayoutGuide type="bottom" id="y00-87-RkT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8TP-4h-MLW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IAn-yT-hWa">
+                                <rect key="frame" x="130.5" y="70" width="59" height="42"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zKN-8j-D35">
+                                <rect key="frame" x="40" y="220" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="GIV-ul-CER"/>
+                                    <constraint firstAttribute="height" constant="128" id="olA-XK-usa"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lZQ-Qs-kOk">
+                                <rect key="frame" x="16" y="518" width="85" height="30"/>
+                                <state key="normal" title="Пропустить"/>
+                                <connections>
+                                    <segue destination="VJV-B5-WcK" kind="show" id="KzT-oD-iSv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lZQ-Qs-kOk" firstAttribute="leading" secondItem="8TP-4h-MLW" secondAttribute="leading" constant="16" id="0KP-ZY-R1u"/>
+                            <constraint firstItem="IAn-yT-hWa" firstAttribute="top" secondItem="7Wv-Ad-LmT" secondAttribute="bottom" constant="50" id="DFF-f8-V5n"/>
+                            <constraint firstItem="IAn-yT-hWa" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8TP-4h-MLW" secondAttribute="leading" id="FAz-EG-DmC"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="lZQ-Qs-kOk" secondAttribute="trailing" constant="20" symbolic="YES" id="Pnp-Ve-a8K"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="IAn-yT-hWa" secondAttribute="trailing" id="Sob-zG-d1l"/>
+                            <constraint firstItem="y00-87-RkT" firstAttribute="top" secondItem="lZQ-Qs-kOk" secondAttribute="bottom" constant="20" id="TMJ-S3-A87"/>
+                            <constraint firstItem="zKN-8j-D35" firstAttribute="centerY" secondItem="8TP-4h-MLW" secondAttribute="centerY" id="VCc-ts-0EF"/>
+                            <constraint firstItem="IAn-yT-hWa" firstAttribute="centerX" secondItem="8TP-4h-MLW" secondAttribute="centerX" id="b7f-OQ-3RJ"/>
+                            <constraint firstItem="zKN-8j-D35" firstAttribute="centerX" secondItem="8TP-4h-MLW" secondAttribute="centerX" id="kDO-Pm-9k0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="photoImageView" destination="zKN-8j-D35" id="G9B-9i-OSf"/>
+                        <outlet property="titleLabel" destination="IAn-yT-hWa" id="hnP-Ht-xQX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pqK-dA-Tgf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-774" y="836"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bMZ-2t-pLz">
